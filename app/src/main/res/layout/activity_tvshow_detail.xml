@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TVShowDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wrapper_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_detail_poster_tv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="@string/title_poster"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper_tv"
+            app:layout_constraintStart_toStartOf="@+id/wrapper_tv"
+            app:layout_constraintTop_toTopOf="@+id/wrapper_tv" />
+
+        <TextView
+            android:id="@+id/text_detail_title_tv"
+            style="@style/TextContent.Title.Detail"
+            android:layout_toEndOf="@id/image_detail_poster_tv"
+            android:text="@string/title_tv_shows"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper_tv"
+            app:layout_constraintStart_toStartOf="@+id/wrapper_tv"
+            app:layout_constraintTop_toBottomOf="@+id/image_detail_poster_tv" />
+
+        <TextView
+            android:id="@+id/text_label_release_tv"
+            style="@style/TextContent.Label"
+            android:text="@string/title_release"
+            app:layout_constraintStart_toStartOf="@+id/wrapper_tv"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_genre_tv" />
+
+        <TextView
+            android:id="@+id/text_detail_release_tv"
+            style="@style/TextContent.Release"
+            android:layout_below="@+id/text_detail_title_tv"
+            android:layout_toEndOf="@id/image_detail_poster_tv"
+            android:text="@string/title_release"
+            app:layout_constraintStart_toEndOf="@+id/text_label_release_tv"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_genre_tv" />
+
+        <TextView
+            android:id="@+id/text_detail_genre_tv"
+            style="@style/TextContent.Genre"
+            android:layout_below="@id/text_detail_release_tv"
+            android:layout_toEndOf="@id/image_detail_poster_tv"
+            android:text="@string/title_genre"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper_tv"
+            app:layout_constraintStart_toStartOf="@+id/wrapper_tv"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_title_tv" />
+
+        <TextView
+            android:id="@+id/text_label_duration_tv"
+            style="@style/TextContent.Label"
+            android:text="@string/title_duration"
+            app:layout_constraintStart_toStartOf="@+id/wrapper_tv"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_release_tv" />
+
+        <TextView
+            android:id="@+id/text_detail_duration_tv"
+            style="@style/TextContent.Duration"
+            android:layout_below="@id/text_detail_genre_tv"
+            android:layout_toEndOf="@id/image_detail_poster_tv"
+            android:text="@string/title_duration"
+            app:layout_constraintStart_toEndOf="@+id/text_label_duration_tv"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_release_tv" />
+
+        <TextView
+            android:id="@+id/text_label_overview_tv"
+            style="@style/TextContent.Label"
+            app:layout_constraintStart_toStartOf="@id/wrapper_tv"
+            android:layout_below="@+id/text_label_duration_tv"
+            android:layout_toEndOf="@id/image_detail_poster_tv"
+            android:text="@string/title_overview"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_duration_tv"
+            />
+
+        <TextView
+            android:id="@+id/text_detail_overview_tv"
+            style="@style/TextContent.Overview"
+            android:text="@string/title_overview"
+            app:layout_constraintStart_toStartOf="@id/wrapper_tv"
+            app:layout_constraintEnd_toEndOf="@id/wrapper_tv"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_overview_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

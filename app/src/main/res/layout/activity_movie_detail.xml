@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MovieDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_detail_poster_movie"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="@string/title_poster"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper"
+            app:layout_constraintStart_toStartOf="@+id/wrapper"
+            app:layout_constraintTop_toTopOf="@+id/wrapper" />
+
+        <TextView
+            android:id="@+id/text_detail_title_movie"
+            style="@style/TextContent.Title.Detail"
+            android:layout_toEndOf="@id/image_detail_poster_movie"
+            android:text="@string/title_movies"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper"
+            app:layout_constraintStart_toStartOf="@+id/wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/image_detail_poster_movie" />
+
+        <TextView
+            android:id="@+id/text_label_release"
+            style="@style/TextContent.Label"
+            android:text="@string/title_release"
+            app:layout_constraintStart_toStartOf="@+id/wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_genre_movie" />
+
+        <TextView
+            android:id="@+id/text_detail_release_movie"
+            style="@style/TextContent.Release"
+            android:layout_below="@+id/text_detail_title_movie"
+            android:layout_toEndOf="@id/image_detail_poster_movie"
+            android:text="@string/title_release"
+            app:layout_constraintStart_toEndOf="@+id/text_label_release"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_genre_movie" />
+
+        <TextView
+            android:id="@+id/text_detail_genre_movie"
+            style="@style/TextContent.Genre"
+            android:layout_below="@id/text_detail_release_movie"
+            android:layout_toEndOf="@id/image_detail_poster_movie"
+            android:text="@string/title_genre"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper"
+            app:layout_constraintStart_toStartOf="@+id/wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_title_movie" />
+
+        <TextView
+            android:id="@+id/text_label_duration"
+            style="@style/TextContent.Label"
+            android:text="@string/title_duration"
+            app:layout_constraintStart_toStartOf="@+id/wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_release" />
+
+        <TextView
+            android:id="@+id/text_detail_duration_movie"
+            style="@style/TextContent.Duration"
+            android:layout_below="@id/text_detail_genre_movie"
+            android:layout_toEndOf="@id/image_detail_poster_movie"
+            android:text="@string/title_duration"
+            app:layout_constraintStart_toEndOf="@+id/text_label_duration"
+            app:layout_constraintTop_toBottomOf="@+id/text_detail_release_movie" />
+
+        <TextView
+            android:id="@+id/text_label_overview"
+            style="@style/TextContent.Label"
+            android:layout_below="@+id/text_label_duration"
+            android:text="@string/title_overview"
+            app:layout_constraintStart_toStartOf="@+id/wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_duration" />
+
+        <TextView
+            android:id="@+id/text_detail_overview_movie"
+            style="@style/TextContent.Overview"
+            android:text="@string/title_overview"
+            app:layout_constraintStart_toStartOf="@+id/wrapper"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_overview"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
