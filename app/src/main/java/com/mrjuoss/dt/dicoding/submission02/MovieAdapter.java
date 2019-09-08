@@ -20,8 +20,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieAdapter
     private Context context;
     private ArrayList<Movie> movies;
 
-    private OnItemClickCallback onItemClickCallback;
-
     public MovieAdapter(Context context) {
         this.context = context;
         movies = new ArrayList<>();
@@ -52,7 +50,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieAdapter
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //onItemClickCallback.onItemClicked(movies.get(holder.getAdapterPosition()));
 
                 Intent movieDetailIntent = new Intent(view.getContext(), MovieDetailActivity.class);
                 movieDetailIntent.putExtra(MovieDetailActivity.EXTRA_MOVIE, movie);
@@ -87,7 +84,4 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieAdapter
         }
     }
 
-    public interface OnItemClickCallback {
-        void onItemClicked(Movie data);
-    }
 }
